@@ -1,6 +1,6 @@
 ﻿$array=@()
 $volumes=@()
-write-host test222
+write-host test2223
 
 for ($i=1; $i -le 8; $i++)
     {#echo loadgen0$i
