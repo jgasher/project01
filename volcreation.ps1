@@ -1,14 +1,6 @@
 ﻿$array=@()
 $volumes=@()
-$ipaddr1=172.16.1.201
-$ipaddr2=172.16.1.202
-$ipaddr3=172.16.1.203
-$ipaddr4=172.16.1.204
-$ipaddr5=172.16.1.205
-$ipaddr6=172.16.1.206
-$ipaddr7=172.16.1.207
-$ipaddr8=172.16.1.208
-
+write-host test
 
 for ($i=1; $i -le 8; $i++)
     {#echo loadgen0$i
