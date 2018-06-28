@@ -1,5 +1,9 @@
-﻿$array=@()
-$volumes=@()
+﻿$array = @()
+$volumes = @()
+$linuser = "root"
+$linpass = "cpoc81906"
+$linsecpass = ConvertTo-SecureString $linpass -AsPlainText -Force
+$lincreds = New-Object System.Management.Automation.PSCredential ($linuser, $linsecpass)
 
 
 
@@ -8,6 +12,8 @@ for ($i=1; $i -le 8; $i++)
     $array += "loadgen0"+$i
     }
 
+$session = New-SSHSession -ComputerName loadgen0$i -Credential $lincreds -AcceptKey
+write-host $session
 foreach ($loadgen in $array)
     {write-host "Current loadgen is"$loadgen"."
     for ($node=1; $node -le 2; $node++)
